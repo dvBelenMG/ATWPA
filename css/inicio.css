@@ -1,0 +1,17 @@
+.bg-purple{
+    background-color: #5D055F;
+}
+
+h4{
+    color: #DC790A;
+}
+
+.bg-orange{
+    background-color: #DC790A;
+}
+.cards-wrapper{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

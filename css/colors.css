@@ -1,3 +1,36 @@
 .bg-systemprimary{
     background-color: #DAFAFF
 }
+
+.bg-flan{
+    background-color: #FCFF7C;
+}
+
+.bg-bluesky{
+    background-color: #58E0DE;
+}
+
+.bg-pink{
+    background-color: #F4A28C;
+}
+
+.hw1{
+    height: 150px;
+    width: 350px;
+}
+
+.bg-blueaqua{
+    background-color: #75D1E0;
+}
+
+.rounded-7{
+    border-radius: 20px;
+}
+
+
+.hwbtn{
+    height: 70px;
+    width: 80%;
+    border: none;
+}
+

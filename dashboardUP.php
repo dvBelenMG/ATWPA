@@ -1,65 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sidebar With Bootstrap</title>
-    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <title>Document</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/colors.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 </head>
-
 <body>
+
+<?php include 'process\menuUP.php'; ?>
+
+
     <nav class="navbar navbar-light bg-light shadow">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Abilitytalk</a>
+            <a class="icon nav-link active" data-bs-toggle="offcanvas" href="#offcanvasMenu" role="button">
+                <i class="bi bi-list text-dark" style="font-size: 25px;"></i>
+            </a>
+            <a class="navbar-brand mx-auto" href="#">
+                <h4>ABILITYTALK</h4>
+            </a>
         </div>
-      </nav>
-    <div class="wrapper">
-        <aside id="sidebar" class="shadow">
-            <div class="">
-                <button class="toggle-btn" type="button">
-                    <i class="bi bi-three-dots text-dark"></i>
-                </button>
-                <div class="sidebar-logo text-center">
-                    <a href="#" ><img src="imgns/ATLOGO.svg" alt=""></a>
-                </div>
-            </div>
-            <ul class="sidebar-nav">
-                <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">
-                        <i class="bi bi-person-circle text-dark"></i>
-                        <span class="text-dark">Perfil</span>
-                    </a>
-                </li>
-                <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">
-                        <i class="bi bi-house-fill text-dark"></i>
-                        <span class="text-dark">Dashboard</span>
-                    </a>
-                </li>
+    </nav>
 
-                <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">
-                        <i class="bi bi-chat-dots-fill text-dark"></i>
-                        <span class="text-dark">Chats</span>
-                    </a>
-                </li>
-            
-            </ul>
-            <div class="sidebar-footer">
-                <a href="#" class="sidebar-link">
-                    <i class="bi bi-gear-fill text-dark"></i>
-                    <span class="text-dark">Configuracion</span>
-                </a>
-            </div>
-        </aside>
-        <div class="main p-3">
-            <!--carousel de imagenes :)-->
-            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+
+    <div class="container">
+        
+            <!--aqui va un carrusel de imágenes-->
+            <div class="row mt-3">
+                  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                   <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                   <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -96,13 +66,42 @@
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Next</span>
                 </button>
-              </div>
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-        crossorigin="anonymous"></script>
-    <script src="js/sidebar.js"></script>
-</body>
 
+              </div>
+            </div>
+            <!--fin del carrusel-->
+            <!--Aqui van los demas apartados del dashboard-->
+            <div class="row mt-3 justify-content-center align-items-center text-center">
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    
+                    <nav>
+                        <a href="actividadesUP.php">
+                            <img src="imgns/icons/Group 40.png" alt="" srcset="">
+                        </a>
+                    </nav>
+                    <p>Actividades</p>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    <nav>
+                        <a href="">
+                            <img src="imgns/icons/Group 39.png" alt="" srcset="">
+                        </a>
+                    </nav>
+                    <p>registro de actividades</p>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    <nav>
+                        <a href="nivelesUP.php">
+                            <img src="imgns/icons/Group 38.png" alt="" srcset="">
+                        </a>
+                        <p>lenguaje de señas</p>
+                    </nav>
+                </div>
+            </div>
+       
+    </div>
+
+
+    <script src="js\bootstrap.bundle.min.js"></script>
+</body>
 </html>

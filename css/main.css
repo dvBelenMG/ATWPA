@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+h1{
+    font-family: Nanum Myeongjo bold, erif;
+}
+
+.boton button{
+    text-decoration: none;
+    color: antiquewhite;
+    background-color: #75D1E0;;
+}
+
+a{
+    text-decoration: none;
+}
+
+.poppins{
+    font-family: poppins, erif;
+}
+
+.text-poppins{
+    font-family: 'Poppins', sans-serif;
+}
+.font-bold{
+    font-weight: 600;
+}
+
+.bg-ros{
+    background: #FDC5A6;
+}
+.img{
+    position: static;
+    align-items: end;
+}
+.radius-1{
+    border-radius: 10px;
+}

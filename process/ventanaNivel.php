@@ -9,7 +9,7 @@
         <div class="row mt-1">
             <div class="col-md-4 col-lg-4 col-sm-4">
                 <nav>
-                    <a href="">
+                    <a href="video.html">
                         <img src="imgns/image 139.png"  width="80px" height="80px" alt="" srcset="">
                     </a>
                 </nav>
@@ -17,16 +17,16 @@
             </div>
             <div class="col-md-4 col-lg-4 col-sm-4">
                 <nav>
-                    <a href="">
-                        <img src="imgns/image 137.png"  width="80px" height="80px" alt="" srcset="">
+                    <a href="menu-abecedario.html" id="nivel2">
+                        <img src="imgns/image 137.png"  width="80px" height="80px" alt="" srcset="" class="locked">
                     </a>
                 </nav>
                 <p>abecedario 1</p>
             </div>
             <div class="col-md-4 col-lg-4 col-sm-4">
                 <nav>
-                    <a href="">
-                        <img src="imgns/image 138.png"  width="80px" height="80px" alt="" srcset="">
+                    <a href="Memorama-AT/indexm.html" id="nivel3">
+                        <img src="imgns/image 138.png"  width="80px" height="80px" alt="" srcset="" class="locked">
                     </a>
                 </nav>
                 <p>actividad 1</p>
@@ -39,8 +39,8 @@
             </div>
             <div class="col-md-4 col-lg-4 col-sm-4">
                 <nav>
-                    <a href="">
-                        <img src="imgns/image 140.png"  width="80px" height="80px" alt="" srcset="">
+                    <a href="abecedario1.html" id="nivel4">
+                        <img src="imgns/image 140.png"  width="80px" height="80px" alt="" srcset="" class="locked">
                     </a>
                 </nav>
                 <p>evaluación</p>

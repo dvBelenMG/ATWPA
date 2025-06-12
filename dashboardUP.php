@@ -16,7 +16,7 @@
     <nav class="navbar navbar-light bg-light shadow">
         <div class="container-fluid">
             <a class="icon nav-link active" data-bs-toggle="offcanvas" href="#offcanvasMenu" role="button">
-                <i class="bi bi-list text-dark" style="font-size: 25px;"></i>
+                <img src="bootstrap-icons-1.13.1/list.svg" alt="" srcset="">
             </a>
             <a class="navbar-brand mx-auto" href="#">
                 <h4>ABILITYTALK</h4>
@@ -39,22 +39,22 @@
                   <div class="carousel-item active">
                     <img src="imgns/banner1.jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                      <h5>First slide label</h5>
-                      <p>Some representative placeholder content for the first slide.</p>
+                      <h5>Bienvenido</h5>
+                      <p>¿Qué haremos hoy?</p>
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <img src="imgns/banner1.jpg" class="d-block w-100" alt="...">
+                    <img src="imgns/banner3.jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                      <h5>Second slide label</h5>
-                      <p>Some representative placeholder content for the second slide.</p>
+                      <h5>lleva tu experiencia al maximo</h5>
+                      <p>prueba las actividades que tenemos para ti</p>
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <img src="imgns/banner1.jpg" class="d-block w-100" alt="...">
+                    <img src="imgns/banner2.jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                      <h5>Third slide label</h5>
-                      <p>Some representative placeholder content for the third slide.</p>
+                      <h5> </h5>
+                      <p>aprende lenguaje de señas desde 0</p>
                     </div>
                   </div>
                 </div>

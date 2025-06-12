@@ -9,15 +9,15 @@
     </div>
     <div class="row mt-2">
         <a href="dashboardUP.php" class="text-decoration-none text-dark">
-        <p><i class="bi bi-house-door-fill"></i> dashboard</p>
+        <p><img src="bootstrap-icons-1.13.1/house-fill.svg" alt="" srcset="">dashboard</p>
     </div>
     <div class="row mt-2">
         <a href="ajustes2.php" class="text-decoration-none text-dark">
-        <p><i class="bi bi-gear-fill"></i> ajustes</p>
+        <p><img src="bootstrap-icons-1.13.1/gear-fill.svg" alt="" srcset=""> ajustes</p>
     </div>
     <div class="row mt-2">
         <a href="perfilUP.php" class="text-decoration-none text-dark">
-        <p><i class="bi bi-person-circle"></i> mi perfil</p>
+        <p><img src="bootstrap-icons-1.13.1/person-circle.svg" alt="" srcset=""> mi perfil</p>
     </div>
   </div>
 </div>

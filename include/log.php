@@ -31,7 +31,7 @@ if (isset($_POST['Iniciar_Sesion'])) {
                 header("Location: ../SystemAt/dashboardT.php");
                 break;
             case 3:
-                header("Location: ../SystemAt/dashboardP.php");
+                header("Location: ../ATWPA/dashboardUP.php");
                 break;
             case 4:
                 header("Location: ../SystemAt/dashboardE.php");

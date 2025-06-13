@@ -36,7 +36,7 @@ if (isset($_POST['registrar'])) {
                 if($tipoUsuario==2){
                     header("location:../ATWPA/dashboardUP.php");}
                 else if($tipoUsuario==3){
-                    header("location:../ATWPA/dashboardUP.php");    
+                    header("location:../ATWPA/login-validate.php");    
                 }
                 else if($tipoUsuario==4){
                     header("location:../ATWPA/dashboardUP.php");}

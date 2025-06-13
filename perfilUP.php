@@ -1,3 +1,37 @@
+<?php
+include 'include/conexion.php';
+include 'include/log.php';
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+// Verifica si hay una sesión iniciada
+if (!isset($_SESSION['login']) || $_SESSION['login'] !== TRUE) {
+    header("Location: login.php");
+    exit();
+}
+
+$emailUsuario = $_SESSION['usuario']; // Obtenemos el email guardado en sesión
+
+// Consulta para obtener los datos del usuario
+$consulta = "SELECT u.ID_Usuario, u.NombreUser, u.ApellidoP, u.ApellidoM, u.Telefono, u.Email, u.ID_Tusuario, u.ID_Genero,
+tu.ID_Tusuario, tu.NombreTusuario, g.ID_Genero, g.NombreG FROM usuarios u INNER JOIN
+tipousuario tu ON u.ID_Tusuario = tu.ID_Tusuario INNER JOIN
+genero g ON u.ID_Genero = g.ID_Genero WHERE Email = '$emailUsuario'";
+$resultado = $conecta->query($consulta);
+
+if ($resultado->num_rows == 1) {
+    $usuario = $resultado->fetch_assoc(); // Aquí tienes todos los datos del usuario
+} else {
+    echo "Error: usuario no encontrado.";
+    exit();
+}
+
+// Cierre de conexión
+$conecta->close();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,23 +70,23 @@
     <div class="container mt-4">
     <div class="row justify-content-center">
             <div class=" dts col-sm-10 col-md-10 col-lg-10 bg-cont text-center tUser ">
-                paciente
+                <?php echo htmlspecialchars($usuario['NombreTusuario']); ?>
             </div>
         </div>
         <div class="row justify-content-center">
             <div class=" dts col-sm-5 col-md-5 col-lg-5 bg-cont ">
-              Nombre: israel monsalvo de jesus  
+              Nombre: <?php echo htmlspecialchars($usuario['NombreUser'] . ' ' . $usuario['ApellidoP'] . ' ' . $usuario['ApellidoM']); ?>
             </div>
             <div class=" dts col-sm-5 col-md-5 col-lg-5 bg-cont ">
-                Email: Monsalvo@gmail.com
+                Email:  <?php echo htmlspecialchars($usuario['Email']); ?>
             </div>
         </div>
         <div class="row justify-content-center">
             <div class=" dts col-sm-5 col-md-5 col-lg-5 bg-cont ">
-                problema del habla
+                Genero: <?php echo htmlspecialchars($usuario['NombreG']); ?>
             </div>
             <div class=" dts col-sm-5 col-md-5 col-lg-5 bg-cont ">
-                teléfono de contacto: 15686545
+                teléfono de contacto: <?php echo htmlspecialchars($usuario['Telefono']); ?>
             </div>
         </div>
         <div class="row justify-content-center">

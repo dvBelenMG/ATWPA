@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sopa de Letras</title>
+    <link rel="stylesheet" href="front.css" />
+</head>
+
+<body>
+    <div class="header-box">
+        <h1>Animales Domesticos</h1>
+    </div>
+
+    <div class="timer-box" id="timer">
+        Tiempo: 60s
+    </div>
+    <div class="pause-button-container">
+        <button id="pause-play-btn" type="button" title="Pausar/Continuar" style="border-radius:20px;">
+            <img id="pause-play-icon" src="/pause.svg" alt="Pausar"
+                style="width:20px; height:20px; object-fit:contain;">
+        </button>
+    </div>
+
+    <div class="grid-container">
+        <div id="grid"></div>
+    </div>
+
+    <div id="word-list">
+        <strong>Palabras a buscar:</strong>
+        <ul id="words">
+            <li data-word="PERRO">Perro</li>
+            <li data-word="GATO">Gato</li>
+            <li data-word="CONEJO">Conejo</li>
+            <li data-word="HAMSTER">Hamster</li>
+            <li data-word="PEZ">Pez</li>
+            <li data-word="COTORRO">Cotorro</li>
+        </ul>
+    </div>
+
+    <div id="buttons" class="hidden">
+        <button onclick="restartGame()"><img src="restart.png" alt=""></button>
+        <a href="../menu-sopa-letras.html">
+            <button><img src="exit.png" alt=""></button></a>
+    </div>
+
+    <div id="retry" class="hidden">
+        <button onclick="restartGame()"><img src="restart.png" alt=""></button>
+    </div>
+
+    <script src="back.js"></script>
+</body>
+
+</html>

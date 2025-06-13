@@ -38,13 +38,13 @@ if (isset($_POST['Iniciar_Sesion'])) {
                 break;
             default:
                 // tengo mensajes de error,pero aun no funcionan
-                $mensajeLogin = "<p>Tu cuenta no tiene un tipo de usuario asignado correctamente.</p>";
+                $mensajeLogin2 = "<p>Tu cuenta no tiene un tipo de usuario asignado correctamente.</p>";
                 break;
         }
         exit();
     } else {
         // Si no se encuentra un usuario o una contraseña manda el msj de error,pero tampoco funciona
-        $mensajeLogin = "<p>Correo o contraseña incorrectos. Intenta nuevamente.</p>";
+        $mensajeLogin = '<p class="text-danger text-center mt-2">Correo o contraseña incorrectos. Intenta nuevamente.</p>';
     }
 
     //aqui ya cierro la conexion a la bd

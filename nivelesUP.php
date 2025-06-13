@@ -96,6 +96,32 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+//evaluacion
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const nivel4Img = document.querySelector('#nivel4 img');
+
+  if (localStorage.getItem('evaluacion1_desbloqueada') === 'true' && nivel4Img) {
+    nivel4Img.classList.remove('locked');
+    nivel4Img.classList.add('unlocked');
+    setTimeout(() => {
+      nivel4Img.classList.remove('unlocked');
+    }, 1000);
+  }
+
+  const nivel4Link = document.getElementById('nivel4');
+  if (nivel4Link) {
+    nivel4Link.addEventListener('click', e => {
+      if (nivel4Img.classList.contains('locked')) {
+        e.preventDefault();
+        alert('Debes completar la actividad antes de acceder a la evaluación.');
+      }
+    });
+  }
+});
+
 
 
 </script>

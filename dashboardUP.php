@@ -83,7 +83,7 @@
                 </div>
                 <div class="col-sm-4 col-md-4 col-lg-4">
                     <nav>
-                        <a href="">
+                        <a href="registro-actividades.php">
                             <img src="imgns/icons/Group 39.png" alt="" srcset="">
                         </a>
                     </nav>

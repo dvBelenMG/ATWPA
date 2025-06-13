@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>El Viaje de Luna y Estrella</title>
+    <style>
+        body {
+            background-color: #f0f2f5;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+        .page {
+            display: none;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .active {
+            display: block;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-light bg-light shadow">
+    <div class="container-fluid">
+        <a class="icon nav-link active" href="dashboardUP.php" role="button">
+            <img src="bootstrap-icons-1.13.1/arrow-left.svg" alt="">
+        </a>
+        <a class="navbar-brand mx-auto" href="#">
+            <h4>Cuentos</h4>
+        </a>
+    </div>
+</nav>
+
+<div class="container mt-2 justify-content-center">
+    <div class="page active" id="textPage">
+        <h2>El Viaje de Luna y Estrella</h2>
+        <p>
+            Luna era una niña curiosa que siempre soñaba con las estrellas. Un día, decidió que quería ir a la luna.
+            Su mejor amiga, Estrella, se unió a la aventura. Juntas, recolectaron cajas de cartón, pegatinas y pintura para construir un cohete.
+            Después de días de trabajo, su cohete estaba listo. Con un gran "¡Despegue!", saltaron dentro. El cohete voló alto, atravesando nubes esponjosas. 
+        </p>
+        <center>
+            <img src="imgns/luna-estrella.jpg" alt="" class="img-fluid" height="60%" width="60%">
+        </center>
+    </div>
+    <div class="page" id="imagePage">
+        <h2>El Viaje de Luna y Estrella</h2>
+        <p>
+            Cuando llegaron a la luna, se sorprendieron al ver a los Lunáticos, unos seres amigables que brillaban como estrellas.
+            Los Lunáticos les mostraron su hogar: un jardín de flores que cantaban y ríos de jugo de frutas.
+            Luna y Estrella aprendieron sobre la importancia de cuidar la Tierra y prometieron compartir lo que habían aprendido con sus amigos.
+            Al final, regresaron a casa con el corazón lleno de alegría y nuevas ideas para proteger su planeta.
+        </p>
+        <center>
+            <img src="imgns/luna-estrella2.jpg" alt="" class="img-fluid" height="60%" width="60%">
+        </center>
+    </div>
+    <div class="button-container">
+        <button class="btn btn-primary" id="nextButton">Siguiente</button>
+    </div>
+</div>
+
+<!-- Script para cambiar de página -->
+<script>
+    const textPage = document.getElementById('textPage');
+    const imagePage = document.getElementById('imagePage');
+    const nextButton = document.getElementById('nextButton');
+
+    let currentPage = 0;
+
+    nextButton.addEventListener('click', () => {
+        if (currentPage === 0) {
+            textPage.classList.remove('active');
+            imagePage.classList.add('active');
+            nextButton.textContent = 'Volver';
+            currentPage = 1;
+        } else {
+            imagePage.classList.remove('active');
+            textPage.classList.add('active');
+            nextButton.textContent = 'Siguiente';
+            currentPage = 0;
+        }
+    });
+</script>
+
+<!-- Script para registrar progreso de lectura cada 5 segundos -->
+<script>
+    const tiempoMaximo = 60; // segundos para alcanzar 100%
+    const intervaloTiempo = 5; // cada cuántos segundos se evalúa
+
+    let progreso = parseFloat(localStorage.getItem("progresoLecturaCuento")) || 0;
+
+    // Convertimos progreso a tiempo acumulado
+    let tiempoTranscurrido = (progreso / 100) * tiempoMaximo;
+
+    const intervalo = setInterval(() => {
+        tiempoTranscurrido += intervaloTiempo;
+
+        // Calculamos nuevo progreso (máximo 100)
+        progreso = Math.min((tiempoTranscurrido / tiempoMaximo) * 100, 100);
+        progreso = Math.round(progreso);
+
+        localStorage.setItem("progresoLecturaCuento", progreso);
+
+        if (progreso >= 100) {
+            clearInterval(intervalo);
+            console.log("Lectura completada al 100%");
+        }
+    }, intervaloTiempo * 1000); // cada 5 segundos
+</script>
+
+</body>
+</html>

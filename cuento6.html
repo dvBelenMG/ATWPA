@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>El Viaje de Luna y Estrella</title>
+    <style>
+        body {
+            background-color: #f0f2f5;
+        }
+        .container {
+            max-width: 600px; 
+            margin: auto; 
+        }
+        .page {
+            display: none;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .active {
+            display: block; 
+        }
+        .button-container {
+            text-align: center; 
+            margin-top: 20px;
+        }
+
+        
+    </style>
+</head>
+<body >
+
+   <nav class="navbar navbar-light bg-light shadow">
+    <div class="container-fluid">
+        <a class="icon nav-link active" href="dashboardUP.php" role="button">
+            <img src="bootstrap-icons-1.13.1/arrow-left.svg" alt="" srcset="">
+        </a>
+        <a class="navbar-brand mx-auto" href="#">
+            <h4>Cuentos</h4>
+        </a>
+    </div>
+</nav>  
+    <div class="container mt-2 justify-content-center">
+        <div class="page active" id="textPage">
+            <h2>las aventuras de la tortuga lula</h2>
+            <p>
+              Tula era una tortuga que vivía en una charca tranquila, pero siempre sentía curiosidad por lo que había más allá de su hogar. Un día, decidió emprender una aventura. Con su amigo el sapo Pepe y la mariposa Lila, se aventuraron al bosque.
+
+Mientras caminaban, encontraron árboles gigantes y flores de colores brillantes. De repente, se toparon con un río caudaloso. 
+            </p>
+            <center>
+                <img src="imgns/luna-estrella.jpg" alt="" srcset="" class="img-fluid " height="60%" width="60%" >
+            </center>
+        </div>
+        <div class="page" id="imagePage">
+            <h2>las aventuras de la tortuga lula</h2>
+            <p>
+                C Tula, que nunca había cruzado un río, se sintió asustada. Pero sus amigos la animaron. "¡Puedes hacerlo, Tula!", dijeron.
+
+Con valentía, Tula se lanzó al agua y, con la ayuda de Pepe y Lila, cruzó el río. Al otro lado, descubrieron un prado lleno de mariposas y un cielo despejado. Tula se dio cuenta de que la aventura no solo estaba en los lugares lejanos, sino en cada pequeño paso que daba. Regresaron a casa felices, sabiendo que la amistad hace que cualquier aventura sea especial.
+
+            </p>
+            <center>
+                <img src="imgns/luna-estrella2.jpg" alt="" srcset="" class="img-fluid" height="60%" width="60%" >
+            </center>
+        </div>
+        <div class="button-container">
+            <button class="btn btn-primary" id="nextButton">Siguiente</button>
+        </div>
+    </div>
+
+    <script>
+        const textPage = document.getElementById('textPage');
+        const imagePage = document.getElementById('imagePage');
+        const nextButton = document.getElementById('nextButton');
+
+        let currentPage = 0;
+
+        nextButton.addEventListener('click', () => {
+            if (currentPage === 0) {
+                textPage.classList.remove('active');
+                imagePage.classList.add('active');
+                nextButton.textContent = 'Volver'; 
+                currentPage = 1;
+            } else {
+                imagePage.classList.remove('active');
+                textPage.classList.add('active');
+                nextButton.textContent = 'Siguiente';
+                currentPage = 0;
+            }
+        });
+    </script>
+
+    <script>
+    const tiempoMaximo = 60;
+    const intervaloTiempo = 5;
+
+    let progreso = parseFloat(localStorage.getItem("progresoLulu")) || 0;
+    let tiempoTranscurrido = (progreso / 100) * tiempoMaximo;
+
+    const intervalo = setInterval(() => {
+        tiempoTranscurrido += intervaloTiempo;
+        progreso = Math.min((tiempoTranscurrido / tiempoMaximo) * 100, 100);
+        progreso = Math.round(progreso);
+
+        localStorage.setItem("progresoLulu", progreso);
+
+        if (progreso >= 100) clearInterval(intervalo);
+    }, intervaloTiempo * 1000);
+</script>
+
+</body>
+</html>

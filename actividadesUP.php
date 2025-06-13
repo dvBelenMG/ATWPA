@@ -23,45 +23,76 @@
 
 <div class="container">
     <div class="col-sm-12 col-md-12 col-lg-12 justify-content-center">
-        <div class="row mt-3 justify-content-center" >
-            <div class="bnr col-sm-9 col-md-9 col-sm-9 bg-ros d-flex justify-content-beetwen align-items-center p-3 radius-1 shadow">
-                <div class="text">
-                    <p class="text-poppins font-bold pe-5">Cada pequeño avance es un gran logro sigue adelante!!</p>
-                    <p class="text-poppins text-danger">PASO A PASO LOGRAREMOS <br>RESULTADOS</p>
+        <div class="row mt-3">
+                  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
-                <img src="imgns/family.png" width="170px" class="img-fluid img" srcset="">
-            </div>
-        </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="imgns/IMGA1.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>JUEGOS DE PALABRAS</h5>
+                      <p>Diviertete con nuestros juegos disponibles para ti</p>
+                      
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="imgns/IMGA2.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>NUESTROS JUEGOS DE LECTURA</h5>
+                      <p>Diviertete sumergiendote en la lectura </p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="imgns/IMGA3.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5> JUEGA CON TRABALENGUAS</h5>
+                      <p>Retate a ti mismo con nuestros juegos de trabalenguas</p>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
 
-        <div class="row mt-4 justify-content-center">
-            <div class="col-sm-11 col-md-11 col-lg-11 justify-content-center">
-            <form class="d-flex">
-        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-secondary ps-2" type="submit">Search</button>
+              </div>
+            </div>
+    </div>
+
+        
       </form>
             </div>
         </div>
     </div>
 </div>
 
-<div class="container">
+<div class="container mt-3">
+
     <div class="col-sm-12 col-md-12 col-lg-12">
         <div class="row mt-4 justify-content-center text-center">
-            <div class="col-6 col-md-3">
+            <div class="col-6 col-md-4">
                 <img src="imgns/image 43.png" class="img-fluid shadow border border-1" srcset="">
-                <p>actividad</p>
+                <p>juegos de palabras</p>
             </div>
-            <div class="col-6 col-md-3">
-            <img src="imgns/image 44.png" class="img-fluid shadow border border-1" srcset="">
-            <p>actividad</p>
+            <div class="col-6 col-md-4">
+            <a href="juego-vocablo.html">
+              <img src="imgns/image 44.png" class="img-fluid shadow border border-1" srcset="">
+            </a>
+            <p>juegos de vocabularios</p>
             </div>
-            <div class="col-6 col-md-3">
-            <img src="imgns/image 45.png" class="img-fluid shadow border border-1" srcset="">
-            <p>actividad</p>
-            </div>
-            <div class="col-6 col-md-3">
-            <img src="imgns/image 46.png" class="img-fluid shadow border border-1" srcset="">
-                <p>actividad</p>
+            <div class="col-6 col-md-4">
+            <a href="lectura-pantalla.html">
+              <img src="imgns/image 46.png" class="img-fluid shadow border border-1" srcset="">
+            </a>
+                <p>Lectura</p>
             </div>
         </div>
     </div>

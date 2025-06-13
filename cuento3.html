@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>El Castillo de Dulces de Pedro</title>
+    <style>
+        body {
+            background-color: #f0f2f5;
+        }
+        .container {
+            max-width: 600px; 
+            margin: auto; 
+        }
+        .page {
+            display: none;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .active {
+            display: block; 
+        }
+        .button-container {
+            text-align: center; 
+            margin-top: 20px;
+        }
+
+        
+    </style>
+</head>
+<body >
+
+   <nav class="navbar navbar-light bg-light shadow">
+    <div class="container-fluid">
+        <a class="icon nav-link active" href="dashboardUP.php" role="button">
+            <img src="bootstrap-icons-1.13.1/arrow-left.svg" alt="" srcset="">
+        </a>
+        <a class="navbar-brand mx-auto" href="#">
+            <h4>Cuentos</h4>
+        </a>
+    </div>
+</nav>  
+    <div class="container mt-2 justify-content-center">
+        <div class="page active" id="textPage">
+            <h2>El Castillo de Dulces de Pedro</h2>
+            <p>
+              Pedro era un niño goloso que soñaba con un castillo hecho de dulces. Un día, mientras exploraba el parque, encontró un mapa antiguo que lo guiaba hacia un lugar mágico. Siguiendo las pistas, llegó a un castillo de caramelos, cubierto de chocolate y con torres de galleta.
+
+Dentro, conoció a la Reina Dulce, quien le ofreció todo tipo de golosinas. Pedro, emocionado, comenzó a comer sin parar. 
+            </p>
+            <center>
+                <img src="imgns/luna-estrella.jpg" alt="" srcset="" class="img-fluid " height="60%" width="60%" >
+            </center>
+        </div>
+        <div class="page" id="imagePage">
+            <h2>El Castillo de Dulces de Pedro</h2>
+            <p>
+               Pero pronto se dio cuenta de que no podía disfrutarlo solo. Se sintió solo en el castillo de dulces.
+
+Decidió invitar a sus amigos del parque. Cuando llegaron, todos disfrutaron juntos de las golosinas. Al final, Pedro aprendió que compartir es mucho más dulce que comer solo. La Reina Dulce los despidió con un gran banquete, y todos regresaron a casa con sonrisas y barrigas llenas.
+
+            </p>
+            <center>
+                <img src="imgns/luna-estrella2.jpg" alt="" srcset="" class="img-fluid" height="60%" width="60%" >
+            </center>
+        </div>
+        <div class="button-container">
+            <button class="btn btn-primary" id="nextButton">Siguiente</button>
+        </div>
+    </div>
+
+    <script>
+        const textPage = document.getElementById('textPage');
+        const imagePage = document.getElementById('imagePage');
+        const nextButton = document.getElementById('nextButton');
+
+        let currentPage = 0;
+
+        nextButton.addEventListener('click', () => {
+            if (currentPage === 0) {
+                textPage.classList.remove('active');
+                imagePage.classList.add('active');
+                nextButton.textContent = 'Volver'; 
+                currentPage = 1;
+            } else {
+                imagePage.classList.remove('active');
+                textPage.classList.add('active');
+                nextButton.textContent = 'Siguiente';
+                currentPage = 0;
+            }
+        });
+    </script>
+
+<script>
+    const tiempoMaximo = 60;
+    const intervaloTiempo = 5;
+
+    let progreso = parseFloat(localStorage.getItem("progresoCastillo")) || 0;
+    let tiempoTranscurrido = (progreso / 100) * tiempoMaximo;
+
+    const intervalo = setInterval(() => {
+        tiempoTranscurrido += intervaloTiempo;
+        progreso = Math.min((tiempoTranscurrido / tiempoMaximo) * 100, 100);
+        progreso = Math.round(progreso);
+
+        localStorage.setItem("progresoCastillo", progreso);
+
+        if (progreso >= 100) clearInterval(intervalo);
+    }, intervaloTiempo * 1000);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>La Nube Pintora</title>
+    <style>
+        body {
+            background-color: #f0f2f5;
+        }
+        .container {
+            max-width: 600px; 
+            margin: auto; 
+        }
+        .page {
+            display: none;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .active {
+            display: block; 
+        }
+        .button-container {
+            text-align: center; 
+            margin-top: 20px;
+        }
+
+        
+    </style>
+</head>
+<body >
+
+   <nav class="navbar navbar-light bg-light shadow">
+    <div class="container-fluid">
+        <a class="icon nav-link active" href="dashboardUP.php" role="button">
+            <img src="bootstrap-icons-1.13.1/arrow-left.svg" alt="" srcset="">
+        </a>
+        <a class="navbar-brand mx-auto" href="#">
+            <h4>Cuentos</h4>
+        </a>
+    </div>
+</nav>  
+    <div class="container mt-2 justify-content-center">
+        <div class="page active" id="textPage">
+            <h2>La Nube Pintora</h2>
+            <p>
+             Nube era una nube traviesa que siempre quería hacer del cielo un lugar más bonito. Con su pincel mágico, pintaba arcoíris, estrellas y hasta corazones. Sin embargo, un día se sintió triste porque nadie la veía.
+
+Decidió hacer algo especial y pintó un enorme arcoíris que se extendía por todo el cielo. Al ver el arcoíris, todos en la tierra salieron a admirarlo y a sonreír  
+            </p>
+            <center>
+                <img src="imgns/luna-estrella.jpg" alt="" srcset="" class="img-fluid " height="60%" width="60%" >
+            </center>
+        </div>
+        <div class="page" id="imagePage">
+            <h2>La Nube Pintora</h2>
+            <p>
+                 Los niños comenzaron a jugar y a bailar bajo su colorido brillo.
+
+Nube se dio cuenta de que, aunque a veces se sentía invisible, su arte podía alegrar el día de los demás. Desde entonces, continuó pintando el cielo, sabiendo que su trabajo traía felicidad a todos. Y así, Nube encontró su lugar en el cielo, rodeada de risas y alegría.
+
+            </p>
+            <center>
+                <img src="imgns/luna-estrella2.jpg" alt="" srcset="" class="img-fluid" height="60%" width="60%" >
+            </center>
+        </div>
+        <div class="button-container">
+            <button class="btn btn-primary" id="nextButton">Siguiente</button>
+        </div>
+    </div>
+
+    <script>
+        const textPage = document.getElementById('textPage');
+        const imagePage = document.getElementById('imagePage');
+        const nextButton = document.getElementById('nextButton');
+
+        let currentPage = 0;
+
+        nextButton.addEventListener('click', () => {
+            if (currentPage === 0) {
+                textPage.classList.remove('active');
+                imagePage.classList.add('active');
+                nextButton.textContent = 'Volver'; 
+                currentPage = 1;
+            } else {
+                imagePage.classList.remove('active');
+                textPage.classList.add('active');
+                nextButton.textContent = 'Siguiente';
+                currentPage = 0;
+            }
+        });
+    </script>
+
+    <script>
+    const tiempoMaximo = 60;
+    const intervaloTiempo = 5;
+
+    let progreso = parseFloat(localStorage.getItem("progresoNube")) || 0;
+    let tiempoTranscurrido = (progreso / 100) * tiempoMaximo;
+
+    const intervalo = setInterval(() => {
+        tiempoTranscurrido += intervaloTiempo;
+        progreso = Math.min((tiempoTranscurrido / tiempoMaximo) * 100, 100);
+        progreso = Math.round(progreso);
+
+        localStorage.setItem("progresoNube", progreso);
+
+        if (progreso >= 100) clearInterval(intervalo);
+    }, intervaloTiempo * 1000);
+</script>
+
+
+</body>
+</html>

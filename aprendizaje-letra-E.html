@@ -25,7 +25,7 @@
   localStorage.setItem('letraVisitada_' + letra, 'true');
 </script>
 
-<div class="col-sm-12 col-lg-12 col-md-12 justify-content-center align-items-center">
+<!--<div class="col-sm-12 col-lg-12 col-md-12 justify-content-center align-items-center">
     <div class="row mt-2 text-center justify-content-center align-items-center">
        <div class="col-sm-12 col-md-10 col-lg-10">
          <img src="imgns/E 1.png" alt="" srcset="" class="img-fluid" width="130px" height="130px">
@@ -41,7 +41,68 @@
             <a href="menu-abecedario.html" style="text-decoration: none;"><button class="form-control bg-btnblue text-light" style="height: 70px; border-radius: 20px; text-decoration: none;">REGRESAR</button></a>
         </div>
     </div>
-</div>
+</div>-->
+
+<style>
+    .btn-custom {
+      background-color: #84d8e5;
+      color: white;
+      font-weight: bold;
+    }
+    .btn-custom:hover {
+      background-color: #6cc3d1;
+    }
+    .img-fluid {
+      max-height: 300px;
+      object-fit: contain;
+    }
+    .text-small {
+      font-size: 0.95rem;
+    }
+    .text-warning-custom {
+      color: #d9534f;
+    }
+  </style>
+
+
+<div class="container py-4">
+    <!-- Fila de video y ejemplo -->
+    <div class="row mb-4 text-center align-items-center">
+      <!-- Video o cámara -->
+      <div class="col-6 col-md-6 mb-3">
+        <div class="video-placeholder rounded shadow">
+          Cámara aquí
+        </div>
+      </div>
+      <!-- Imagen de la letra A -->
+      <div class="col-6 col-md-6 mb-3">
+        <img src="imgns/E 1.png" alt="Letra A en lengua de señas" class="img-fluid rounded " />
+      </div>
+    </div>
+
+    <!-- Instrucciones -->
+    <div class="row mb-3 text-center">
+      <p class="text-small">
+        CIERRAS LA MANO A MODO QUE QUEDE EN UN PUÑO, PERO EL PULGAR TIENE QUE QUEDAR ENCIMA DE LAS PUNTAS DE LOS OTROS DEDOS.
+      </p>
+      <p class="text-warning-custom text-small">
+        Por favor presiona la cámara para verificar que las letras sean adecuadas como la imagen lo muestra
+      </p>
+    </div>
+
+    <!-- Botones -->
+    <div class="row text-center">
+      <div class="col-6">
+        <a href="aprendizaje-letra-D.html"><button class="btn btn-custom w-100 py-2">REGRESAR</button></a>
+      </div>
+      <div class="col-6">
+       <a href="nivelesUP.php"> <button class="btn btn-custom w-100 py-2">SIGUIENTE</button></a>
+      </div>
+    </div>
+  </div>
+
+
+<script src="js/bootstrap.min.js"></script>
 
 
 </body>

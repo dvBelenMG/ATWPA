@@ -79,7 +79,7 @@
     <div class="col-sm-12 col-md-12 col-lg-12">
         <div class="row mt-4 justify-content-center text-center">
             <div class="col-6 col-md-4">
-                <img src="imgns/image 43.png" class="img-fluid shadow border border-1" srcset="">
+                <a href="menu-sopa-letras.html"><img src="imgns/image 43.png" class="img-fluid shadow border border-1" srcset=""></a>
                 <p>juegos de palabras</p>
             </div>
             <div class="col-6 col-md-4">

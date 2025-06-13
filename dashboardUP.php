@@ -13,6 +13,7 @@
 <?php include 'process\menuUP.php'; ?>
 
 
+
     <nav class="navbar navbar-light bg-light shadow">
         <div class="container-fluid">
             <a class="icon nav-link active" data-bs-toggle="offcanvas" href="#offcanvasMenu" role="button">
@@ -26,7 +27,7 @@
 
 
     <div class="container">
-        
+        <?php include 'process\cerrar_sesion.php';?>
             <!--aqui va un carrusel de imágenes-->
             <div class="row mt-3">
                   <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -46,15 +47,15 @@
                   <div class="carousel-item">
                     <img src="imgns/banner3.jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                      <h5>lleva tu experiencia al maximo</h5>
-                      <p>prueba las actividades que tenemos para ti</p>
+                      <h5>Lleva tu experiencia al máximo</h5>
+                      <p>Prueba las actividades que tenemos para ti</p>
                     </div>
                   </div>
                   <div class="carousel-item">
                     <img src="imgns/banner2.jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                       <h5> </h5>
-                      <p>aprende lenguaje de señas desde 0</p>
+                      <p>Aprende lenguaje de señas desde 0</p>
                     </div>
                   </div>
                 </div>

@@ -1,3 +1,4 @@
+
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasMenuLabel">Abilitytalk</h5>
@@ -12,8 +13,7 @@
         <p><img src="bootstrap-icons-1.13.1/house-fill.svg" alt="" srcset="">dashboard</p>
     </div>
     <div class="row mt-2">
-        <a href="ajustes2.php" class="text-decoration-none text-dark">
-        <p><img src="bootstrap-icons-1.13.1/gear-fill.svg" alt="" srcset=""> ajustes</p>
+        <p class="text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><img src="bootstrap-icons-1.13.1/box-arrow-right.svg" class="m-2" >cerrar sesión</p>
     </div>
     <div class="row mt-2">
         <a href="perfilUP.php" class="text-decoration-none text-dark">

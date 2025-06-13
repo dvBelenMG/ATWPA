@@ -23,20 +23,20 @@ include 'include/Reg.php';
   <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class="needs-validation mt-4" novalidate>
     <h2 class="text-center mb-4">Registro de Usuario</h2>
 
-    <!-- Fecha de nacimiento -->
+    
     <div class="mb-3">
       <label for="FechaNac" class="form-label">Fecha de nacimiento</label>
       <input type="date" name="fechaNac" id="FechaNac" class="form-control" required>
       <div class="invalid-feedback">Por favor, ingresa tu fecha de nacimiento.</div>
     </div>
 
-    <!-- Nombre -->
+    
     <div class="mb-3">
       <input type="text" name="nombre" placeholder="Ingresa tu nombre(s)" class="form-control" required>
       <div class="invalid-feedback">Este campo es obligatorio.</div>
     </div>
 
-    <!-- Apellidos -->
+    
     <div class="row g-2 mb-3">
       <div class="col-md-6">
         <input type="text" name="ap" placeholder="Apellido paterno" class="form-control" required>
@@ -48,13 +48,13 @@ include 'include/Reg.php';
       </div>
     </div>
 
-    <!-- Teléfono -->
+    
     <div class="mb-3">
       <input type="tel" name="tel" placeholder="Número de teléfono (10 dígitos)" class="form-control" pattern="\d{10}" required>
       <div class="invalid-feedback">Ingresa un número válido de 10 dígitos.</div>
     </div>
 
-    <!-- Email y Password -->
+    
     <div class="row g-2 mb-3">
       <div class="col-md-6">
         <input type="email" name="email" placeholder="Email" class="form-control" required>
@@ -66,7 +66,7 @@ include 'include/Reg.php';
       </div>
     </div>
 
-    <!-- Género -->
+    
     <div class="mb-3">
       <select name="Genero" class="form-select" required>
         <option value="" disabled selected>Selecciona tu género</option>
@@ -77,7 +77,7 @@ include 'include/Reg.php';
       <div class="invalid-feedback">Selecciona una opción.</div>
     </div>
 
-    <!-- Tipo de usuario -->
+    
     <div class="mb-3">
       <select name="TUsuario" class="form-select" required>
         <option value="" disabled selected>Selecciona tu tipo de usuario</option>
@@ -88,10 +88,10 @@ include 'include/Reg.php';
       <div class="invalid-feedback">Selecciona una opción.</div>
     </div>
 
-    <!-- Campo oculto -->
+    
     <input type="hidden" name="EstadoUsuario" value="1">
 
-    <!-- Aceptar términos -->
+    
     <div class="form-check mb-3">
       <input class="form-check-input" type="checkbox" id="invalidCheck" required>
       <label class="form-check-label" for="invalidCheck">
@@ -100,17 +100,17 @@ include 'include/Reg.php';
       <div class="invalid-feedback">Debes aceptar los términos para continuar.</div>
     </div>
 
-    <!-- Botón de envío -->
+   
     <div class="d-grid">
       <input type="submit" value="Registrar" name="registrar" class="boton form-control  mb-5 text-light">
     </div>
   </form>
 </div>
 
-<!-- Bootstrap JS -->
+
 <script src="js/bootstrap.bundle.min.js"></script>
 
-<!-- Validación de Bootstrap -->
+
 <script>
 (function () {
   'use strict'

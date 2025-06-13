@@ -31,7 +31,7 @@
 
         <div class="row mt-2 justify-content-center">
           <div class="col-sm-10 col-md-10 col-lg-10">
-            <a href="login.php">
+            <a href="login-validate.php">
                 <div class="boton">
                 <button class="form-control" style ="border-radius: 25px;">INICIAR SESION</button>
                 </a>
@@ -41,7 +41,7 @@
         </div>
         <div class="row mt-2 justify-content-center">
           <div class="col-sm-10 col-md-10 col-lg-10">
-            <a href="registro.php">
+            <a href="registro-validate.php">
                 <div class="boton">
                 <button class="btn-rl form-control" style ="border-radius: 25px;">REGISTRARSE</button>
                 </div>

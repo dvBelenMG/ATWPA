@@ -25,7 +25,7 @@
     </div>
 </nav>
 
-<div class="col-sm-12 col-lg-12 col-md-12 justify-content-center align-items-center">
+<!--<div class="col-sm-12 col-lg-12 col-md-12 justify-content-center align-items-center">
     <div class="row mt-2 text-center justify-content-center align-items-center">
        <div class="col-sm-12 col-md-10 col-lg-10">
          <img src="imgns/video-simulacion.png" alt="" srcset="" class="img-fluid" width="300px" height="300px">
@@ -44,8 +44,78 @@
             <center><a href=""> <img src="imgns/ok.png" alt="" srcset="" width="70px" height="70px"></a></center>
         </div>
     </div>
+</div>-->
+
+<style>
+    .video-wrapper {
+      border: 1px solid #ccc;
+    background-color: #f8f9fa;
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    max-width: 720px; 
+    margin: 0 auto;
+    }
+
+    .question-box {
+      background-color: #d9f2f2;
+      text-align: center;
+      font-weight: bold;
+      padding: 10px;
+      border: 1px solid #ccc;
+      margin-top: 15px;
+    }
+
+    .circle-btn {
+      
+      border: none;
+      
+    }
+
+    
+
+    
+  </style>
+</head>
+<body>
+
+<div class="container text-center mt-5">
+  
+  <div class="video-wrapper mb-3">
+    <video id="miVideo" class="w-100 h-100" controls>
+      <source src="imgns/video-aprendizaje.mp4" type="video/mp4">
+      Tu navegador no soporta el video.
+    </video>
+  </div>
+
+  
+  <div class="question-box">
+    ¿QUÉ ES EL LENGUAJE DE SEÑAS MEXICANO?
+  </div>
+
+  
+  <div class="mt-3 d-flex justify-content-center gap-3">
+    <button class="circle-btn btn-red" onclick="reiniciarVideo()">
+      <img src="imgns/replay.png" alt="" srcset="" width="70px" height="70px">
+    </button>
+    <button class="circle-btn btn-green" onclick="marcarComoListo()">
+       <img src="imgns/ok.png" alt="" srcset="" width="70px" height="70px">
+    </button>
+  </div>
 </div>
 
+
+<script>
+  function reiniciarVideo() {
+    const video = document.getElementById("miVideo");
+    video.currentTime = 0;
+    video.play();
+  }
+
+  function marcarComoListo() {
+    
+    window.location.href = "nivelesUP.php";
+  }
+</script>
 
 
 </body>

@@ -37,15 +37,8 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>Sopa de letras "Animales salvajes"</td>
-                  <td>Juegos de palabras</td>
-                  <td>
-                    <div class="progress">
-                      <div class="progress-bar bg-success" style="width: 80%;" aria-valuenow="80">80%</div>
-                    </div>
-                  </td>
-                </tr>
+
+
                 
                 
                 <tr>
@@ -108,6 +101,17 @@
   </td>
 </tr>
 
+<tr>
+  <td>Sopa de letras "Animales salvajes"</td>
+  <td>Juegos de palabras</td>
+  <td>
+    <div class="progress">
+      <div id="barraProgresoSopaAnimales" class="progress-bar bg-success" style="width: 0%;" aria-valuenow="0">0%</div>
+    </div>
+  </td>
+</tr>
+
+
                 <tr>
                   <td>completa la oración</td>
                   <td>juegos de vocavulario</td>
@@ -117,15 +121,7 @@
                     </div>
                   </td>
                 </tr>
-                <tr>
-                  <td>trabalenguas</td>
-                  <td>juegos de palabras</td>
-                  <td>
-                    <div class="progress">
-                      <div class="progress-bar bg-success" style="width: 100%;" aria-valuenow="100">100%</div>
-                    </div>
-                  </td>
-                </tr>
+                
               </tbody>
             </table>
           </div>
@@ -228,5 +224,34 @@
     }
   }
 </script>
+
+<script>
+  const progresoSopa = localStorage.getItem("progresoSopaAnimales");
+  if (progresoSopa !== null) {
+    const barra = document.getElementById("barraProgresoSopaAnimales");
+    const porcentaje = parseInt(progresoSopa);
+    if (!isNaN(porcentaje) && barra) {
+      barra.style.width = porcentaje + "%";
+      barra.setAttribute("aria-valuenow", porcentaje);
+      barra.innerText = porcentaje + "%";
+    }
+  }
+</script>
+
+<script>
+  const progresoSopa = localStorage.getItem("progresoSopaAnimalesDomesticos");
+  if (progresoSopa !== null) {
+    const barra = document.getElementById("barraProgresoSopaAnimalesDomesticos");
+    const porcentaje = parseInt(progresoSopa);
+    if (!isNaN(porcentaje) && barra) {
+      barra.style.width = porcentaje + "%";
+      barra.setAttribute("aria-valuenow", porcentaje);
+      barra.innerText = porcentaje + "%";
+    }
+  }
+</script>
+
+
+
 </body>
 </html>
